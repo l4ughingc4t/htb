@@ -1,0 +1,70 @@
++++
+title = "HackTheBox - [マシン名] Writeup"
+date = "YYYY-MM-DD"
+description = "[概要を1行で]"
+tags = ["HackTheBox", "CTF", "[OS]", "[脆弱性名]", "[使用ツール]", "[難易度]"]
+categories = ["HackTheBox"]
+toc = true
+draft = false
++++
+Machine Info
+FieldDetailsMachine[マシン名]OS[Windows / Linux]Difficulty[Easy / Medium / Hard]CategoryRetiredVulnerability[CVE番号 / 脆弱性名]
+
+Reconnaissance
+Nmap Scan
+bashnmap -sV 10.xxx.xxx.xxx
+[Nmapの出力をここに貼る]
+Key observations:
+
+ポート xxx/tcp ([サービス名]) が開放
+OS: [OS名]
+[その他気づいた点]
+
+
+Vulnerability Scanning
+[スキャン方法]
+bash[コマンド]
+[出力結果]
+[発見した脆弱性の説明]
+
+Enumeration
+[列挙方法（例：SMB / Web / FTP）]
+bash[コマンド]
+[出力結果]
+[気づいた点・次のステップへの考察]
+
+Exploit Research
+bashsearchsploit [脆弱性名]
+[出力結果]
+[採用したExploitとその理由]
+
+Exploitation
+[使用した手法]
+bash[コマンド]
+[取得した権限・シェルの説明]
+
+Privilege Escalation
+[権限昇格の手法]
+bash[コマンド]
+[rootまたはSYSTEM取得の説明]
+
+Flag Retrieval
+bash# User flag
+[コマンド]
+
+# Root flag
+[コマンド]
+
+Summary
+StepTool / Commandポートスキャンnmap -sV脆弱性スキャン[ツール名]列挙[ツール名]Exploit[ツール名]権限昇格[手法]結果[取得した権限]
+Key Takeaways
+
+[学んだこと1]
+[学んだこと2]
+[学んだこと3]
+
+Remediation
+
+[対策1]
+[対策2]
+[対策3]
