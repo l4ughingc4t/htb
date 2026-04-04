@@ -7,64 +7,155 @@ categories = ["HackTheBox"]
 toc = true
 draft = false
 +++
-Machine Info
-FieldDetailsMachine[マシン名]OS[Windows / Linux]Difficulty[Easy / Medium / Hard]CategoryRetiredVulnerability[CVE番号 / 脆弱性名]
 
-Reconnaissance
-Nmap Scan
-bashnmap -sV 10.xxx.xxx.xxx
-[Nmapの出力をここに貼る]
-Key observations:
+## Machine Info
 
-ポート xxx/tcp ([サービス名]) が開放
-OS: [OS名]
-[その他気づいた点]
+| Field | Details |
+|-------|---------|
+| Machine | [Machine Name] |
+| OS | [OS Name] |
+| IP | [IP Address] |
 
+---
 
-Vulnerability Scanning
-[スキャン方法]
-bash[コマンド]
-[出力結果]
-[発見した脆弱性の説明]
+## Reconnaissance
 
-Enumeration
-[列挙方法（例：SMB / Web / FTP）]
-bash[コマンド]
-[出力結果]
-[気づいた点・次のステップへの考察]
+### Nmap Scan
 
-Exploit Research
-bashsearchsploit [脆弱性名]
-[出力結果]
-[採用したExploitとその理由]
+```bash
+nmap -sV [IP]
+```
 
-Exploitation
-[使用した手法]
-bash[コマンド]
-[取得した権限・シェルの説明]
+```text
+[Nmap output here]
+```
 
-Privilege Escalation
-[権限昇格の手法]
-bash[コマンド]
-[rootまたはSYSTEM取得の説明]
+---
 
-Flag Retrieval
-bash# User flag
-[コマンド]
+## [Initial Access Method (e.g. FTP Access / Web Fuzzing)]
 
-# Root flag
-[コマンド]
+```bash
+[command]
+```
 
-Summary
-StepTool / Commandポートスキャンnmap -sV脆弱性スキャン[ツール名]列挙[ツール名]Exploit[ツール名]権限昇格[手法]結果[取得した権限]
-Key Takeaways
+```text
+[output]
+```
 
-[学んだこと1]
-[学んだこと2]
-[学んだこと3]
+---
 
-Remediation
+## Payload Generation
 
-[対策1]
-[対策2]
-[対策3]
+```bash
+[msfvenom or other payload command]
+```
+
+---
+
+## Upload / Delivery
+
+```bash
+[command]
+```
+
+---
+
+## Trigger
+
+```bash
+[command to trigger the payload]
+```
+
+---
+
+## Listener
+
+```bash
+[nc or metasploit listener command]
+```
+
+```text
+[connection output]
+```
+
+---
+
+## Foothold
+
+```bash
+whoami
+```
+
+```text
+[current user]
+```
+
+---
+
+## System Info
+
+```bash
+[systeminfo or uname -a]
+```
+
+```text
+[output]
+```
+
+---
+
+## Post Exploitation
+
+```bash
+[enumeration commands]
+```
+
+---
+
+## Results
+
+- [Exploit candidate 1]
+- [Exploit candidate 2]
+- [Exploit candidate 3]
+
+---
+
+## Privilege Escalation
+
+```bash
+[privesc exploit command]
+```
+
+---
+
+## [SYSTEM / Root] Shell
+
+```bash
+[whoami / getuid]
+```
+
+```text
+[NT AUTHORITY\SYSTEM or root]
+```
+
+---
+
+## Flags
+
+### User
+
+```bash
+[command to read user.txt]
+```
+
+### Root
+
+```bash
+[command to read root.txt]
+```
+
+---
+
+## Summary
+
+[Initial access method] → [foothold] → [privesc method] → [SYSTEM/root]
