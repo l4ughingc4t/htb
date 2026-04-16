@@ -1,3 +1,6 @@
+チートシート
+https://github.com/l4ughingc4t/offsec-cheats/blob/main/htb_cheatsheet.md
+
 # htb
 
 exploitが止まる時
